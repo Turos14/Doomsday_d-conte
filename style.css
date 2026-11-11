@@ -1,0 +1,125 @@
+:root {
+  --vert: #39ff14;
+  --vert-sombre: #0f5c07;
+  --fond: #000;
+  --case: #050f05;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--fond);
+  color: var(--vert);
+  font-family: "Courier New", ui-monospace, monospace;
+  min-height: 100vh;
+  padding: max(16px, env(safe-area-inset-top)) 16px 32px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header { text-align: center; margin-bottom: 24px; }
+
+.logo { width: 72px; height: 72px; filter: drop-shadow(0 0 12px var(--vert)); }
+
+h1 {
+  font-size: clamp(2rem, 10vw, 3.5rem);
+  letter-spacing: .15em;
+  text-shadow: 0 0 8px var(--vert), 0 0 24px var(--vert-sombre);
+}
+
+.sub { opacity: .7; text-transform: uppercase; letter-spacing: .3em; font-size: .8rem; margin: 4px 0 16px; }
+
+.countdown { display: flex; justify-content: center; gap: 10px; }
+.countdown div {
+  border: 1px solid var(--vert);
+  border-radius: 6px;
+  min-width: 68px;
+  padding: 8px 4px;
+  box-shadow: 0 0 10px var(--vert-sombre) inset;
+}
+.countdown span { display: block; font-size: 1.8rem; font-weight: bold; }
+.countdown small { font-size: .65rem; text-transform: uppercase; opacity: .7; }
+
+.next { margin-top: 14px; font-size: .85rem; opacity: .8; min-height: 1.2em; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.case {
+  aspect-ratio: 1;
+  background: var(--case);
+  border: 2px solid var(--vert-sombre);
+  border-radius: 10px;
+  color: var(--vert-sombre);
+  font: inherit;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: not-allowed;
+}
+.case small { font-size: .9rem; }
+
+.case.ouverte {
+  color: var(--vert);
+  border-color: var(--vert);
+  box-shadow: 0 0 12px var(--vert-sombre), 0 0 4px var(--vert) inset;
+  cursor: pointer;
+  transition: transform .15s;
+}
+.case.ouverte:active { transform: scale(.95); }
+.case.aujourdhui { animation: pulse 1.6s infinite; }
+
+@keyframes pulse {
+  50% { box-shadow: 0 0 24px var(--vert), 0 0 8px var(--vert) inset; }
+}
+
+.modal {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, .85);
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+.modal[hidden] { display: none; }
+.modal-box {
+  position: relative;
+  background: #000;
+  border: 2px solid var(--vert);
+  border-radius: 12px;
+  box-shadow: 0 0 30px var(--vert-sombre);
+  padding: 32px 20px 24px;
+  width: 100%; max-width: 400px;
+  text-align: center;
+}
+.modal-day { opacity: .7; text-transform: uppercase; letter-spacing: .2em; font-size: .8rem; }
+.modal-box h2 { margin: 12px 0 24px; font-size: 1.3rem; }
+
+.btn, .install {
+  display: inline-block;
+  background: var(--vert);
+  color: #000;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+.btn.desactive { opacity: .4; pointer-events: none; }
+
+.close {
+  position: absolute; top: 8px; right: 12px;
+  background: none; border: none;
+  color: var(--vert); font-size: 1.3rem; cursor: pointer;
+}
+
+.install { display: block; margin: 28px auto 0; }
+.install[hidden] { display: none; }

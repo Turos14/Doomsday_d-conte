@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#000"/>
+  <circle cx="256" cy="270" r="250" fill="#39ff14" fill-opacity=".12"/>
+  <!-- Capuche -->
+  <path d="M256 40 C140 40 92 130 92 230 L92 470 L420 470 L420 230 C420 130 372 40 256 40 Z" fill="#0f5c07"/>
+  <path d="M256 62 C156 62 118 140 118 230 L118 470 L394 470 L394 230 C394 140 356 62 256 62 Z" fill="#082f04"/>
+  <!-- Masque -->
+  <path d="M256 104 C188 104 160 150 160 210 L160 330 C160 380 200 432 256 446 C312 432 352 380 352 330 L352 210 C352 150 324 104 256 104 Z" fill="#c4d2c4"/>
+  <path d="M256 104 C188 104 160 150 160 210 L160 330 C160 380 200 432 256 446 L256 104 Z" fill="#9aa89a"/>
+  <!-- Rivets -->
+  <g fill="#4a5a4a">
+    <circle cx="178" cy="214" r="6"/><circle cx="334" cy="214" r="6"/>
+    <circle cx="178" cy="330" r="6"/><circle cx="334" cy="330" r="6"/>
+  </g>
+  <!-- Arête du nez -->
+  <path d="M256 150 L256 300" stroke="#8a9a8a" stroke-width="6"/>
+  <!-- Yeux -->
+  <path d="M190 228 L240 222 L240 246 L196 250 Z" fill="#39ff14"/>
+  <path d="M322 228 L272 222 L272 246 L316 250 Z" fill="#39ff14"/>
+  <!-- Bouche grillée -->
+  <rect x="214" y="338" width="84" height="40" rx="6" fill="#000"/>
+  <g fill="#9aa89a"><rect x="228" y="338" width="6" height="40"/><rect x="245" y="338" width="6" height="40"/><rect x="262" y="338" width="6" height="40"/><rect x="279" y="338" width="6" height="40"/></g>
+</svg>
