@@ -1,8 +1,9 @@
 // Réseau d'abord (pour récupérer les nouveaux liens), cache en secours hors ligne
-const CACHE = "doomsday-v1";
+const CACHE = "doomsday-v2";
 const FICHIERS = [
   "./", "index.html", "style.css", "app.js", "videos.js", "manifest.json",
   "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png",
+  "img/photo-j4.jpg", "img/photo-j8.jpg", "img/photo-j11.jpg", "img/photo-j13.jpg",
 ];
 
 self.addEventListener("install", (e) => {

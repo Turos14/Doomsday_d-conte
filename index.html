@@ -27,7 +27,16 @@
     <p id="next" class="next"></p>
   </header>
 
-  <main id="grid" class="grid"></main>
+  <main>
+    <h2 class="section">Calendrier de décembre</h2>
+    <div id="grid" class="grid"></div>
+
+    <section class="films">
+      <h2 class="section">Films essentiels avant Doomsday</h2>
+      <p id="films-progression" class="progression"></p>
+      <ul id="films"></ul>
+    </section>
+  </main>
 
   <button id="install" class="install" hidden>Installer l'app</button>
 
@@ -35,7 +44,8 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <p id="modal-day" class="modal-day"></p>
       <h2 id="modal-title"></h2>
-      <a id="modal-link" class="btn" target="_blank" rel="noopener">Voir la vidéo</a>
+      <img id="modal-photo" class="photo" alt="" hidden>
+      <a id="modal-link" class="btn" rel="noopener">Voir la vidéo</a>
       <button id="modal-close" class="close" aria-label="Fermer">✕</button>
     </div>
   </div>
