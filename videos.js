@@ -20,7 +20,7 @@ const CONFIG = {
 
 const CASES = [
   { titre: "Bande-annonce Doomsday (VF)", lien: "https://www.youtube.com/watch?v=opI0klN3-Pw" },
-  { titre: "Photo Doom", photo: "img/photo-j2.jpg" },
+  { titre: "Photo Cyclope", photo: "img/photo-j2.jpg" },
   { titre: "Case mystère", lien: "" },
   { titre: "Photo Doom", photo: "img/photo-j4.jpg" },
   { titre: "Case mystère", lien: "" },
